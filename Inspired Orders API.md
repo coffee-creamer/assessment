@@ -56,6 +56,6 @@ Environment/config:
 
 The base URL and token should be stored as variables, not hardcoded. Created order IDs should be captured from the response and reused in later tests. CI should use isolated test data and secure variables for API_TOKEN and API_BASE_URL.
 
-## Part C — Contract awareness
+## Part C  Contract awareness
 
 A breaking API change would be removing or renaming the total field from the Order response. The schema marks total as required, so consumers may rely on it for order display, reconciliation or payment checks. If total was renamed to amount or removed, consumers could fail even if the API still returns 200 or 201. A consumer contract test would detect this by asserting that POST /orders and GET /orders/{orderId} still return total as a numeric field with the expected value.
