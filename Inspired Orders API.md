@@ -1,6 +1,6 @@
 # Inspired Orders API response
 
-## Part A — Risk-based API test design
+## Part A  Risk-based API test design
 
 For this API I would start with the areas that can cause the biggest business impact if they fail. The API is small, but the main risks are still clear: creating orders, changing order status, and retrieving/filtering orders correctly.
 
